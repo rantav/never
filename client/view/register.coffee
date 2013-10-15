@@ -7,4 +7,4 @@ Template.register.events
       i = Interests.insert(email: email, createdAt: new Date())
       if i
         Meteor.call('sendNewUserEmail', email)
-        console.log('thanks')
+        $('#thanks').show().addClass('fadeInUp')
