@@ -6,4 +6,5 @@ Template.register.events
     if email
       i = Interests.insert(email: email, createdAt: new Date())
       if i
+        Meteor.call('sendNewUserEmail', email)
         console.log('thanks')
